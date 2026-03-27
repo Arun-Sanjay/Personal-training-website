@@ -80,15 +80,6 @@ export default function Testimonials() {
           ))}
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-8 text-center text-xs text-zinc-600"
-        >
-          Results may vary. Names changed for privacy.
-        </motion.p>
       </div>
     </section>
   );

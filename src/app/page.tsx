@@ -9,14 +9,9 @@ import FAQ from "@/components/faq";
 import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 import UrgencyBanner from "@/components/urgency-banner";
-import SocialProof from "@/components/social-proof";
 import WhatsAppFloat from "@/components/whatsapp-float";
-import VideoSection from "@/components/video-section";
-import TransformationGallery from "@/components/transformation-gallery";
 import Credentials from "@/components/credentials";
 import ComparisonTable from "@/components/comparison-table";
-import InstagramFeed from "@/components/instagram-feed";
-import BlogTips from "@/components/blog-tips";
 import LocationMap from "@/components/location-map";
 import LoadingScreen from "@/components/loading-screen";
 import CursorEffect from "@/components/cursor-effect";
@@ -33,13 +28,10 @@ export default function Home() {
         <UrgencyBanner />
         <Navbar />
         <Hero />
-        <SocialProof />
 
         <WaveDivider />
         <Services />
         <DiagonalDivider />
-
-        <VideoSection />
 
         <WaveDivider />
         <Pricing />
@@ -48,10 +40,6 @@ export default function Home() {
 
         <HowItWorks />
 
-        <WaveDivider />
-        <TransformationGallery />
-        <DiagonalDivider />
-
         <AppShowcase />
         <Credentials />
 
@@ -59,9 +47,7 @@ export default function Home() {
         <Testimonials />
         <DiagonalDivider />
 
-        <InstagramFeed />
         <FAQ />
-        <BlogTips />
 
         <WaveDivider />
         <LocationMap />

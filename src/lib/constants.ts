@@ -152,55 +152,6 @@ export const TESTIMONIALS = [
   },
 ] as const;
 
-export const SOCIAL_PROOF = [
-  "Google",
-  "Flipkart",
-  "Infosys",
-  "Amazon",
-  "Swiggy",
-  "Razorpay",
-  "Wipro",
-  "Microsoft",
-] as const;
-
-export const TRANSFORMATIONS = [
-  {
-    name: "Vikram R.",
-    location: "Whitefield",
-    beforeWeight: "92 kg",
-    afterWeight: "78 kg",
-    duration: "16 weeks",
-    initials: "VR",
-    metric: "-14 kg",
-  },
-  {
-    name: "Sneha D.",
-    location: "HSR Layout",
-    beforeWeight: "74 kg",
-    afterWeight: "62 kg",
-    duration: "12 weeks",
-    initials: "SD",
-    metric: "-12 kg",
-  },
-  {
-    name: "Karthik M.",
-    location: "Koramangala",
-    beforeWeight: "85 kg",
-    afterWeight: "73 kg",
-    duration: "14 weeks",
-    initials: "KM",
-    metric: "-12 kg",
-  },
-  {
-    name: "Ananya P.",
-    location: "Indiranagar",
-    beforeWeight: "68 kg",
-    afterWeight: "58 kg",
-    duration: "10 weeks",
-    initials: "AP",
-    metric: "-10 kg",
-  },
-] as const;
 
 export const CREDENTIALS = [
   { value: "ACE", label: "Certified Personal Trainer", icon: "Award" as const },
@@ -252,35 +203,6 @@ export const COMPARISON = [
   },
 ] as const;
 
-export const INSTAGRAM_POSTS = [
-  { caption: "Morning HIIT session at Cubbon Park", tag: "Outdoor Training", color: "from-zinc-800 to-zinc-900" },
-  { caption: "Client meal prep — South Indian style", tag: "Nutrition", color: "from-zinc-800 to-zinc-900" },
-  { caption: "Progressive overload — squat PR day", tag: "Strength", color: "from-zinc-800 to-zinc-900" },
-  { caption: "Recovery day stretching routine", tag: "Recovery", color: "from-zinc-800 to-zinc-900" },
-  { caption: "Home gym setup that actually works", tag: "Home Training", color: "from-zinc-800 to-zinc-900" },
-  { caption: "Quick 20-min ab workout breakdown", tag: "Core", color: "from-zinc-800 to-zinc-900" },
-] as const;
-
-export const BLOG_POSTS = [
-  {
-    title: "5 High-Protein Indian Breakfast Ideas for Muscle Building",
-    excerpt: "Forget oats and eggs every day. Here are 5 desi breakfast options packed with 30g+ protein that actually taste good.",
-    tag: "Nutrition",
-    readTime: "4 min read",
-  },
-  {
-    title: "Why You Don't Need a Gym to Get Fit in Bangalore",
-    excerpt: "From apartment gyms to parks — how to build an effective workout routine without a commercial gym membership.",
-    tag: "Training",
-    readTime: "5 min read",
-  },
-  {
-    title: "The Beginner's Guide to Strength Training After 30",
-    excerpt: "Starting strength training later in life? Here's everything you need to know about building muscle safely.",
-    tag: "Beginners",
-    readTime: "6 min read",
-  },
-] as const;
 
 export const BANGALORE_AREAS = [
   { name: "Koramangala", x: 52, y: 58 },

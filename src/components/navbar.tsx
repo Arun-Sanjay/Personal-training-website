@@ -41,7 +41,8 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-16">
           <div className="flex h-16 items-center justify-between">
             <a
-              href="#"
+              href="/"
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
               className="text-lg font-bold tracking-[0.15em] text-white"
             >
               PREM FITNESS
