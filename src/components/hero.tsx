@@ -85,7 +85,7 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden px-4 pb-32 pt-24 sm:px-8 lg:px-16">
+    <section className="relative flex min-h-screen flex-col justify-center overflow-hidden px-4 pt-24 pb-12 sm:px-8 lg:px-16">
       {/* Gradient blobs — white/silver glow */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="animate-blob absolute -top-40 -left-40 h-80 w-80 rounded-full bg-white/[0.06] blur-[120px]" />
@@ -93,8 +93,10 @@ export default function Hero() {
         <div className="animate-blob animation-delay-4000 absolute -bottom-40 left-1/3 h-72 w-72 rounded-full bg-white/[0.05] blur-[120px]" />
       </div>
 
-      {/* Floating particles */}
-      <FloatingParticles />
+      {/* Floating particles — hidden on mobile to avoid edge overflow */}
+      <div className="hidden sm:block">
+        <FloatingParticles />
+      </div>
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
         {/* ── Left: Text content ── */}
@@ -126,7 +128,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={item}
-            className="text-4xl font-bold leading-tight tracking-[-0.02em] text-white sm:text-5xl md:text-6xl"
+            className="text-3xl font-bold leading-tight tracking-[-0.02em] text-white sm:text-5xl md:text-6xl"
           >
             Your Personal Trainer,
             <br />
@@ -136,7 +138,7 @@ export default function Hero() {
           {/* Subheadline */}
           <motion.p
             variants={item}
-            className="mx-auto mt-6 max-w-2xl text-base text-zinc-400 md:text-lg lg:mx-0"
+            className="mx-auto mt-6 max-w-2xl text-sm text-zinc-400 sm:text-base md:text-lg lg:mx-0"
           >
             In-person training at your home, office, or gym. Customized workout
             plans, nutrition coaching, and a personal fitness app — all in one.
@@ -145,19 +147,19 @@ export default function Hero() {
           {/* CTA buttons */}
           <motion.div
             variants={item}
-            className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start"
+            className="mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:gap-4 sm:justify-center lg:justify-start"
           >
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-[#0A0A0A] transition-all hover:bg-zinc-200 active:scale-95"
+              className="w-full rounded-lg bg-white px-8 py-3.5 text-center text-base font-semibold text-[#0A0A0A] transition-all hover:bg-zinc-200 active:scale-95 sm:w-auto"
             >
               Start Your Transformation
             </a>
             <a
               href="#pricing"
-              className="rounded-lg border border-zinc-700 px-8 py-3.5 text-base font-semibold text-white transition-all hover:border-zinc-500 hover:bg-zinc-900 active:scale-95"
+              className="w-full rounded-lg border border-zinc-700 px-8 py-3.5 text-center text-base font-semibold text-white transition-all hover:border-zinc-500 hover:bg-zinc-900 active:scale-95 sm:w-auto"
             >
               View Plans
             </a>
@@ -175,18 +177,18 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Stats bar — sits at the bottom */}
+      {/* Stats bar — in normal flow, not absolute */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" as const }}
-        className="absolute bottom-12 left-0 right-0 z-10 px-4 sm:px-8 lg:px-16"
+        className="relative z-10 mt-12 px-4 sm:mt-16 sm:px-8 lg:px-16"
       >
-        <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-8 sm:flex-row sm:gap-16">
+        <div className="mx-auto flex max-w-3xl items-center justify-center gap-6 sm:gap-16">
           <CountUp target={100} suffix="+" label="Sessions Completed" />
-          <div className="hidden h-8 w-px bg-zinc-800 sm:block" />
+          <div className="h-8 w-px bg-zinc-800" />
           <CountUp target={0} suffix="" label="Anywhere in Bangalore" />
-          <div className="hidden h-8 w-px bg-zinc-800 sm:block" />
+          <div className="h-8 w-px bg-zinc-800" />
           <CountUp target={0} suffix="" label="Diet + Training + App" />
         </div>
       </motion.div>
